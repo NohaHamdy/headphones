@@ -6,55 +6,79 @@
 /* Variables
    ============================= */
    :root{
-    --font-family:'placeholder', sans-serif;
- }
+      --font-family:'placeholder', sans-serif;
+   }
+  
+   *{
+      padding: 0;
+      margin: 0;
+   }
+   body{
+      background-image: url('images/headphones_hero_1.jpg');
+      height: 100vh;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+   }
+  
+   /**  1- Header **/
+   nav{
+      display: flex;
+      width: 90%;
+      margin: auto;
+      padding: 20px  0;
+      justify-content: space-between;
+      align-items: center;
+   }
+   nav .log img{
+     margin-right: 10px;
+     padding: 5px;
+   }
+   nav ul li{
+     display: inline-block;
+     marging:0 6px;
+   }
+  
+   nav ul li a{
+     color: white;
+     text-decoration: none;
+     font-size: 18px;
+     font-weight: 500;
+     margin-right: 20px;
+   }
+  
+   nav ul li a:hover{
+     color: #FF6565;
+   }
+   /**button**/
 
- *{
-    padding: 0;
-    margin: 0;
- }
- body{
-    background: ;
-    height: 100vh;
-    width: 100%;
- }
-
- /**  1- Header **/
- body{
-    background-image: url('images/headphones_hero_1.jpg');
- }
- nav{
-    display: flex;
-    width: 90%;
-    margin: auto;
-    padding: 20px  0;
-    justify-content: space-between;
-    align-items: center;
- }
- nav .log img{
-   margin-right: 10px;
-   padding: 5px;
- }
- nav ul li{
-   display: inline-block;
-   marging:0 6px;
- }
-
- nav ul li a{
-   color: white;
-   text-decoration: none;
-   font-size: 18px;
-   font-weight: 500;
-   margin-right: 20px;
- }
-
- nav ul li a:hover{
-   color: #FF6565;
- }
-
-@media (max-width:480px) {
-    nav{
-        ???
+   button{
+      height: 44px;
+      width: 162;
+      background-color: #FF6565;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 10px;
+      cursor: pointer;
+      
+   }
+   button:hover, button:active {
+      opacity: 0.9;
     }
-    
- }
+
+    .discription{
+      
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  
+  @media (max-width:480px) {
+      nav{
+         flex-direction: column;
+         justify-content: center;
+      }
+      
+   }
