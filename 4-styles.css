@@ -218,6 +218,14 @@
 .personal *{
     margin:0;
 }
+/** FOOTER **/
+#footer{
+    background: #071629;
+}
+#footer i{
+    font-size: 30px;
+    color: var(--white);
+}
 /**resposivity part **/ 
 /** 1-  Mobile ===============**/
 @media screen and (max-width:480px) {
