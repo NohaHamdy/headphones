@@ -6,7 +6,20 @@
 /* Variables
    ============================= */
    :root{
-      --font-family:'placeholder', sans-serif;
+      --font-family-base: 'Source-sans-Pro-Regular'; 
+      --font-family-title: 'Source-sans-Pro-Semibold'; 
+      --font-family-bold: 'Source-sans-Pro-Bold'; 
+   
+      --font-size-x-small: 1rem; 
+      --font-size-small: 1.2rem; 
+      --font-size-medium: 1.6rem; 
+      --font-size-large: 1.8rem; 
+      --font-size-x-large: 2.3rem; 
+      --font-size-xx-large: 3.2rem; 
+      --font-weight-thin: 100; 
+      --font-weight-regular: 300; 
+      --font-weight-bold: 600;
+      --white: white;
    }
   
    *{
@@ -14,21 +27,33 @@
       margin: 0;
    }
    body{
-      background-image: url('images/headphones_hero_1.jpg');
       height: 100vh;
       width: 100%;
-      max-width: 1000px;
       margin: 0 auto;
    }
   
    /**  1- Header **/
+   .upper{
+      background-image: url('images/headphones_hero_1.jpg');
+      background-repeat: no-repeat;
+      background-size: 1920px 1080px; 
+      background-position: -575px -100px; 
+      max-block-size: 920px; 
+      min-block-size: 840px; 
+      margin: auto; 
+      padding-bottom: 20px; 
+      color: var(--white); 
+      text-align: center;
+   }
    nav{
+      min-block-size: 100px;
       display: flex;
       width: 90%;
       margin: auto;
       padding: 20px  0;
       justify-content: space-between;
       align-items: center;
+      margin-block-end: 225px;
    }
    nav .log img{
      margin-right: 10px;
@@ -52,14 +77,14 @@
    }
    /**button**/
 
-   button{
+   .button{
       height: 44px;
       width: 162;
       background-color: #FF6565;
       color: #fff;
       border: none;
       padding: 10px 20px;
-      border-radius: 20px;
+      border-radius: 25px;
       font-size: 10px;
       cursor: pointer;
       
@@ -67,16 +92,110 @@
    button:hover, button:active {
       opacity: 0.9;
     }
-
+/**discription part**/
     .discription{
       display: flex;
-      justify-content: center;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-inline-size: 1000px;
+      inline-size: 400px;
+      margin:0 auto;
+      color: var(--white);
     }
-  
-  @media (max-width:480px) {
-      nav{
-          ???
+
+    .dis1{
+      font-family: var(--font-family-title);
+      font-size: var(--font-size-large);
+    }
+    .dis2{
+      margin: 20px auto;
+      font-family: var(--font-family-base);
+      font-weight: var(--font-weight-regular);
+      font-size: var(--font-size-small);
+      
+    }
+    .dis3{
+      line-height: 30px;
+      margin-block-start: 65px;
+      font-weight: var(--font-weight-thin);
+      font-family: var(--font-family-base); 
+      font-size: var(--font-size-x-small); 
+       
+       
+    }
+  /** ====== =========================**/
+  /**resposivity part **/ 
+  /** 1-  Mobile ===============**/
+  @media screen and (max-width:480px) {
+      .discription{
+         inline-size: 400px;
+      }
+      .upper{
+         background-repeat: no-repeat;
+         background-position: -600px -40px; 
+      }
+      .dis1{
+         inline-size: 375px;
+         margin: 5px auto;
+         font-size: var(--font-size-medium); 
+      }
+      .dis2{
+         inline-size: 400px;
+         margin: 10px auto;
+         font-size: var(--font-size-x-small);
+      }
+      .dis3{
+         inline-size: 340px;
+         margin: 20px auto;
+         text-align: justify;
+      }
+      
+   }
+   /** 2-TABLET =================**/
+   @media screen and (min-width: 768px){
+      .discription{
+         inline-size: 600px;
+      }
+      .upper{
+         background-repeat: no-repeat;
+         background-position: center 0;
+
+      }
+      .dis1{
+         margin: auto;
+      }
+      .dis2{
+         inline-size: 600px;
+         margin: 10px auto;
+      }
+      .dis3{
+         inline-size: 600px;
+         margin: 10px auto;
+      }
+      
+   }
+   /** 3- DESKTOP **/
+   @media screen and (min-width: 1024px){
+      .discription{
+         inline-size: 1000px;
+      }
+      .upper{
+         background-repeat: no-repeat;
+         background-position: center 0;
+         background-size: cover;
+         inline-size: 100%;
+      }
+      .dis1{
+         margin: auto;
+      }
+      .dis2{
+         inline-size: 600px;
+         margin: 10px auto;
+      }
+      .dis3{
+         inline-size: 800px;
+         margin: 30px auto;
       }
       
    }
